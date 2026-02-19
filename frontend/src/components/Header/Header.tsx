@@ -23,11 +23,11 @@ const Header = () => {
         {/* Nav */}
         <nav className="flex items-center gap-6">
           <Link to="/" className="text-gray-600 hover:text-sage-700 font-medium transition-colors">
-            Home
+            Početna
           </Link>
 
           <Link to="/cart" className="relative text-gray-600 hover:text-sage-700 font-medium transition-colors">
-            Cart
+            Korpa
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-4 bg-sage-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                 {cartCount}
@@ -50,7 +50,7 @@ const Header = () => {
                 onClick={handleLogout}
                 className="border border-sage-500 text-sage-700 hover:bg-sage-50 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
               >
-                Log Out
+                Odjavi Se
               </button>
             </>
           ) : (
@@ -58,7 +58,7 @@ const Header = () => {
               to="/login"
               className="bg-sage-500 hover:bg-sage-700 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
             >
-              Log In
+              Prijavi se
             </Link>
           )}
         </div>

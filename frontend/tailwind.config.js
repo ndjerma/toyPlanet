@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         sage: {
+          50:  '#f4f7f3',
+          100: '#e4ebe0',
           400: '#c4d0bc',
           500: '#a8b89e',
           600: '#8fa585',

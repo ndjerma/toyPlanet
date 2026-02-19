@@ -48,3 +48,16 @@ export interface CartItem {
   ocena?: number;
   datumRezervacije: string;
 }
+
+export interface FilterState {
+  naziv: string;
+  opis: string;
+  tip: ToyType[];
+  uzrast: string;
+  ciljnaGrupa: TargetGroup | '';
+  datumOd: string;
+  datumDo: string;
+  cenaMin: number;
+  cenaMax: number;
+  ocenaMin: number;
+}
