@@ -1,0 +1,46 @@
+# Dokumentacija (interna)
+README.md
+PRD.md
+
+# Claude Code
+.claude/
+
+# ===== FRONTEND =====
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# ===== RASA AGENT =====
+# Trenirani modeli (veliki binarni fajlovi)
+rasa-agent/models/
+# Rasa runtime fajlovi
+rasa-agent/.rasa/
+rasa-agent/results/
+# Python artifakti
+rasa-agent/__pycache__/
+rasa-agent/**/__pycache__/
+rasa-agent/*.pyc
+rasa-agent/**/*.pyc
+rasa-agent/*.pyo
+rasa-agent/.env
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== Logs =====
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
