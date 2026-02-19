@@ -1,4 +1,4 @@
-import { Toy } from '../../types';
+import type { Toy } from '../../types';
 
 interface ToyCardProps {
   toy: Toy;

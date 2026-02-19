@@ -1,4 +1,4 @@
-import { Toy } from '../../types';
+import type { Toy } from '../../types';
 import ToyCard from '../ToyCard/ToyCard';
 
 interface ToyGridProps {
