@@ -5,87 +5,210 @@ nlu:
   examples: |
     - hey
     - hello
-    - hi
-    - hello there
+    - hi there
     - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
     - good afternoon
+    - greetings
+    - howdy
+    - what's up
+    - hey bot
+    - hi, I need help
+    - hello, can you help me
+    - good day
+    - zdravo
+    - cao
+    - bok
+    - hej
+    - dobro jutro
+    - dobro vece
+    - dobar dan
+    - pozdrav
+    - zdravo, treba mi pomoc
+    - hej, mozes li da mi pomognes
 
-- intent: goodbye
+- intent: search_by_type
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - show me [lego](toy_type) toys
+    - I'm looking for [puzzles](toy_type)
+    - do you have [dolls](toy_type)?
+    - I want [building blocks](toy_type)
+    - find me [board games](toy_type)
+    - what [cars](toy_type) do you have?
+    - show [stuffed animals](toy_type)
+    - looking for [action figures](toy_type)
+    - I need [educational toys](toy_type)
+    - any [remote control](toy_type) toys?
+    - what about [outdoor toys](toy_type)?
+    - show me [arts and crafts](toy_type) sets
+    - do you sell [train sets](toy_type)?
+    - I want to buy [science kits](toy_type)
+    - search for [wooden toys](toy_type)
+    - trazim [slagalicu](toy_type)
+    - ima li [figura](toy_type)?
+    - hocu [slikovnicu](toy_type)
+    - pokazi mi [lego](toy_type) igracke
+    - da li imate [lutke](toy_type)?
+    - interesuju me [drustvene igre](toy_type)
+    - trazim [edukativne igracke](toy_type)
+    - ima li [autica](toy_type)?
+    - zelim [figurice](toy_type)
+    - da li prodajete [puzzle](toy_type)?
+    - hocu da kupim [konstruktor](toy_type)
+    - pokazi sve [sportske igracke](toy_type)
+    - trazim [muzicke igracke](toy_type)
+    - ima li [plisane igracke](toy_type)?
+    - imate li [igracke na daljinski](toy_type)?
 
-- intent: affirm
+- intent: search_by_age
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - what toys are good for [3 year olds](age)?
+    - I need something for a [5-year-old](age)
+    - toys for [babies](age)
+    - what do you recommend for [toddlers](age)?
+    - gifts for [10 year old](age)
+    - looking for toys for [2 years](age)
+    - what's suitable for [7 years old](age)?
+    - something for [4-year-old](age) child
+    - I'm buying for a [6 year old](age)
+    - recommendations for [8-year-olds](age)
+    - what's appropriate for [12 year old](age)?
+    - toys for age [1](age)
+    - suitable for [newborn](age)
+    - best toys for [preschoolers](age)
+    - za dete od [3 godine](age)
+    - treba mi nesto za [petogodisnjaka](age)
+    - igracke za [bebe](age)
+    - sta preporucujete za [malu decu](age)?
+    - poklon za dete od [10 godina](age)
+    - trazim igracke za [2 godine](age)
+    - sta ima za [7 godina](age)?
+    - nesto za [novorodjence](age)
+    - kupujem za [cetvrtogodisnjaka](age)
+    - sta je pogodno za [6 godina](age)?
+    - preporuka za [osmogodisnjaka](age)
+    - sta je prikladno za [12 godina](age)?
+    - igracke za uzrast [1 godina](age)
+    - za [predskolce](age)
+    - nesto za [tinejdzere](age)
 
-- intent: deny
+- intent: search_by_group
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - toys for [girls](group)
+    - what do you have for [boys](group)?
+    - looking for toys for [babies](group)
+    - show me gifts for [girls](group)
+    - I need something for [boys](group)
+    - what's popular with [girls](group)?
+    - toys that [boys](group) love
+    - gifts for [baby girls](group)
+    - something for [baby boys](group)
+    - best toys for [toddler girls](group)
+    - show toys for [boys](group)
+    - recommendations for [girls](group)
+    - what's good for [boys](group) birthday?
+    - options for [baby](group)
+    - igracke za [devojcice](group)
+    - sta ima za [decake](group)?
+    - trazim za [bebe](group)
+    - poklon za [devojcicu](group)
+    - treba mi nesto za [decaka](group)
+    - sta vole [devojcice](group)?
+    - igracke koje vole [decaci](group)
+    - poklon za [devojcice](group)
+    - nesto za [decaka](group)
+    - sta preporucujete za [devojcice](group)?
+    - rodjendanski poklon za [decaka](group)
+    - opcije za [bebu](group)
+    - pokazi igracke za [decake](group)
+    - preporuka za [devojcice](group)
+    - treba mi igracka za [decaka](group)
 
-- intent: mood_great
+- intent: search_by_price
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - show me toys under [1000](price_range)
+    - what's available under [2000 dinara](price_range)?
+    - I have a budget of [3000](price_range)
+    - show me [cheap](price_range) toys
+    - looking for [affordable](price_range) options
+    - what are the [cheapest](price_range) toys?
+    - any toys below [1500](price_range)?
+    - show me [budget-friendly](price_range) toys
+    - I want to spend less than [500](price_range)
+    - options under [5000](price_range)
+    - [expensive](price_range) high-quality toys
+    - [premium](price_range) toys please
+    - something [inexpensive](price_range)
+    - gifts around [2000](price_range) dinara
+    - pokazi mi igracke do [1000](price_range)
+    - sta ima do [2000 dinara](price_range)?
+    - budzet mi je [3000 dinara](price_range)
+    - trazim [jeftine](price_range) igracke
+    - [povoljne](price_range) opcije
+    - sta je [najjeftinije](price_range)?
+    - igracke ispod [1500](price_range)
+    - nesto [pristupacno](price_range)
+    - zelim da potrosim manje od [500](price_range)
+    - opcije do [5000](price_range)
+    - [skuplje](price_range) igracke visokog kvaliteta
+    - [premium](price_range) igracke
+    - nesto [povoljno](price_range)
+    - poklon oko [2000 dinara](price_range)
+    - sta mogu da kupim za [1000 dinara](price_range)?
 
-- intent: mood_unhappy
+- intent: search_combined
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - [lego](toy_type) for [boys](group) under [2000](price_range)
+    - [dolls](toy_type) for [girls](group) aged [5](age)
+    - [puzzles](toy_type) for [toddlers](age) that are [affordable](price_range)
+    - [educational](toy_type) toys for [boys](group)
+    - [board games](toy_type) under [3000](price_range) for [girls](group)
+    - something for a [7-year-old](age) [boy](group) under [1500](price_range)
+    - [cheap](price_range) [outdoor](toy_type) toys for [kids](group)
+    - [wooden toys](toy_type) for [babies](age) that are [affordable](price_range)
+    - [creative](toy_type) toys for [girls](group) who are [6](age)
+    - [action figures](toy_type) for [boys](group) under [2500](price_range)
+    - [lego](toy_type) za [decake](group) do [2000 dinara](price_range)
+    - [lutke](toy_type) za [devojcice](group) od [5 godina](age)
+    - [slagalice](toy_type) za [malu decu](age) koje su [jeftine](price_range)
+    - [edukativne igracke](toy_type) za [decake](group)
+    - [drustvene igre](toy_type) do [3000 dinara](price_range) za [devojcice](group)
+    - nesto za [sedmogodisnjaka](age) [decaka](group) do [1500 dinara](price_range)
+    - [jeftine](price_range) [sportske igracke](toy_type) za [decu](group)
+    - [plisane igracke](toy_type) za [bebe](age) koje su [povoljne](price_range)
+    - [kreativne igracke](toy_type) za [devojcice](group) od [6 godina](age)
+    - [figurice](toy_type) za [decake](group) do [2500 dinara](price_range)
 
-- intent: bot_challenge
+- intent: reserve
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - I want to reserve a toy
+    - how do I add to cart?
+    - I'd like to buy this
+    - can I reserve this item?
+    - how to purchase?
+    - I want to order
+    - how do I buy a toy?
+    - add to cart please
+    - I want to place an order
+    - how can I reserve?
+    - I'd like to make a purchase
+    - how do I checkout?
+    - I want to order this toy
+    - can I place an order?
+    - how to add to shopping cart?
+    - zelim da rezervisem
+    - kako da dodam u korpu?
+    - hocu ovo da kupim
+    - mogu li da rezervisem?
+    - kako da narucim?
+    - zelim da narucim
+    - kako da kupim igracku?
+    - dodaj u korpu
+    - zelim da napravim porudzbinu
+    - kako se rezervise?
+    - hocu da kupim
+    - kako da platim?
+    - zelim da narucim ovu igracku
+    - mogu li da narucim?
+    - kako dodati u korpu?
+    - kako funkcionise kupovina?
+    - kako se vrsi porudzbina?

@@ -30,7 +30,7 @@ function App() {
             </main>
           </div>
           <ChatWidget />
-          <Toaster position="top-right" />
+          <Toaster position="bottom-right" />
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>

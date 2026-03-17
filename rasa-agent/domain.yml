@@ -2,32 +2,78 @@ version: "3.1"
 
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - search_by_type
+  - search_by_age
+  - search_by_group
+  - search_by_price
+  - search_combined
+  - reserve
+  - nlu_fallback
+
+entities:
+  - toy_type
+  - age
+  - group
+  - price_range
+
+slots:
+  toy_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: toy_type
+  age:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: age
+  group:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: group
+  price_range:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: price_range
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Zdravo! Dobrodošli u našu prodavnicu igračaka. Mogu da vam pomognem da pronađete savršenu igračku — po vrsti, uzrastu, grupi ili ceni. Kako mogu da vam pomognem?"
+  - text: "Pozdrav! Ovde sam da vam pomognem pronaći pravu igračku. Recite mi šta tražite!"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_search_by_type:
+  - text: "Sjajno! Koristite filter 'Vrsta igračke' na glavnoj stranici da vidite sve igračke tog tipa. Imam lego setove, lutke, puzzle, društvene igre, vozila i još mnogo toga!"
+  - text: "Naravno! Na glavnoj stranici izaberite željenu vrstu igračke iz padajućeg menija. Svaka igračka ima detaljan opis i recenzije kupaca."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_search_by_age:
+  - text: "Odlično! Koristite filter uzrasta na glavnoj stranici da pronađete igračke prikladne za taj uzrast. Sve igračke su označene preporučenim uzrastom."
+  - text: "Razumem! Filtrirajte po uzrastu na glavnoj stranici i prikazaće se samo igračke prikladne za tu starosnu grupu. Vodimo računa o bezbednosti za svaki uzrast."
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_search_by_group:
+  - text: "Super! Koristite filter grupe na glavnoj stranici — možete birati između igračaka za dečake, devojčice ili bebe. Pronađite savršen poklon!"
+  - text: "Naravno! Na glavnoj stranici filtrirajte po grupi. Imamo odabrane kolekcije za dečake, devojčice i bebe svake starosne dobi."
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_search_by_price:
+  - text: "Razumem vaš budžet! Koristite klizač cene na glavnoj stranici da filtrirate igračke u željenom cenovnom rangu. Imamo opcije za svaki džep!"
+  - text: "Naravno! Podesite raspon cena na filteru i prikazaće se sve igračke unutar vašeg budžeta. Kvalitetne igračke dostupne su po različitim cenama."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_search_combined:
+  - text: "Odlično, možete kombinovati više filtera istovremeno! Na glavnoj stranici izaberite vrstu, uzrast, grupu i cenovni rang za precizne rezultate pretrage."
+  - text: "Savršeno! Koristite više filtera zajedno — vrsta + uzrast + cena — da pronađete tačno ono što tražite. Naša prodavnica ima širok asortiman za sve potrebe."
+
+  utter_reserve:
+  - text: "Da rezervišete igračku, kliknite na nju da otvorite stranicu sa detaljima, pa pritisnite 'Dodaj u korpu'. Zatim posetite korpu i potvrdite porudžbinu."
+  - text: "Lako! Pronađite željenu igračku, kliknite 'Dodaj u korpu' na stranici igračke. U korpi možete pregledati sve stavke i završiti kupovinu."
+
+  utter_fallback:
+  - text: "Izvinjavam se, nisam sasvim razumeo vaš zahtev. Mogu da vam pomognem sa: pretragom po vrsti igračke, uzrastu, grupi (dečaci/devojčice/bebe), ceni ili rezervacijom."
+  - text: "Nažalost, nisam siguran šta tražite. Pokušajte npr: 'Imam li lego igračke?', 'Šta ima za petogodišnjake?', 'Nešto za devojčice do 2000 dinara?' ili 'Kako da rezervišem?'"
 
 session_config:
   session_expiration_time: 60

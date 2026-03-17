@@ -2,29 +2,72 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: greet then search by type
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: search_by_type
+  - action: utter_search_by_type
 
-- story: sad path 1
+- story: greet then search by age
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: search_by_age
+  - action: utter_search_by_age
 
-- story: sad path 2
+- story: greet then search by group
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: search_by_group
+  - action: utter_search_by_group
+
+- story: greet then search by price
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_by_price
+  - action: utter_search_by_price
+
+- story: greet then search combined
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_combined
+  - action: utter_search_combined
+
+- story: greet then reserve
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reserve
+  - action: utter_reserve
+
+- story: search by type then reserve
+  steps:
+  - intent: search_by_type
+  - action: utter_search_by_type
+  - intent: reserve
+  - action: utter_reserve
+
+- story: search by age then reserve
+  steps:
+  - intent: search_by_age
+  - action: utter_search_by_age
+  - intent: reserve
+  - action: utter_reserve
+
+- story: search by group then search by price
+  steps:
+  - intent: search_by_group
+  - action: utter_search_by_group
+  - intent: search_by_price
+  - action: utter_search_by_price
+
+- story: search combined then reserve
+  steps:
+  - intent: search_combined
+  - action: utter_search_combined
+  - intent: reserve
+  - action: utter_reserve

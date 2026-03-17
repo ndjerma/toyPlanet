@@ -47,8 +47,8 @@ const Login = () => {
               className="w-full border border-[#e5e0d8] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sage-400"
             />
           </div>
-          {greska && <p className="text-red-500 text-sm">{greska}</p>}  //? ako je greska prazan string, ne prikazuje se nista, ako nije, onda prikazujemo samu gresku
-          <button
+          {greska && <p className="text-red-500 text-sm">{greska}</p>} 
+          <button //? ovo iznad, ako je greska prazan string, ne prikazuje se nista, ako nije, onda prikazujemo samu gresku
             type="submit"
             className="w-full bg-sage-500 hover:bg-sage-700 text-white rounded-lg px-4 py-2 font-medium transition-colors"
           >
