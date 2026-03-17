@@ -18,10 +18,9 @@ const UZRAST_OPTIONS: { value: string; label: string }[] = [
 ];
 
 const CILJNA_GRUPA_OPTIONS: { value: TargetGroup | ''; label: string }[] = [
-  { value: '',          label: 'Sve' },
+  { value: '',          label: 'Sve igračke' },
   { value: 'devojcica', label: 'Devojčica' },
   { value: 'decak',     label: 'Dečak' },
-  { value: 'svi',       label: 'Za sve' },
 ];
 
 export const DEFAULT_FILTERS: FilterState = {
@@ -45,7 +44,8 @@ interface SearchFiltersProps {
 const inputClass =
   'w-full border border-[#e5e0d8] rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-400 bg-white';
 const labelClass = 'block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide';
-
+//* ovde ga importujemo i koristimo da saljemo filtere ka home.tsx, 
+//* kao i metodu onChange za trigger useMemo-a
 const SearchFilters = ({ filters, onChange }: SearchFiltersProps) => {
   const set = <K extends keyof FilterState>(key: K, value: FilterState[K]) =>
     onChange({ ...filters, [key]: value });

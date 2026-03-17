@@ -48,7 +48,7 @@ export interface CartItem {
   ocena?: number;
   datumRezervacije: string;
 }
-
+//* custom typescrip tpye za state
 export interface FilterState {
   naziv: string;
   opis: string;

@@ -1,7 +1,9 @@
 README.md
 PRD.md
+.claude/
 explanations/
 memory/
+odbrana.md
 
 node_modules/
 frontend/node_modules/

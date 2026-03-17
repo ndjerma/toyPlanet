@@ -17,7 +17,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     const stored = localStorage.getItem('cart');
     return stored ? JSON.parse(stored) : [];
   });
-
+  //* useEffect se okida svaki put kad se items promeni, cuvamo korpu i nakon refresha
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(items));
   }, [items]);

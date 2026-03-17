@@ -12,8 +12,10 @@ const parseRange = (s: string): [number, number] => {
 };
 
 const Home = () => {
+  //* cuvamo state 
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
-
+  //* zapravo vrsimo filtriranje kada primimo koji su filteri applied
+  //* i re-renderuje se stranica
   const filtered = useMemo(() => {
     return toys.filter((toy) => {
       // Naziv
