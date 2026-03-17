@@ -9,7 +9,6 @@ frontend/dist/
 frontend/dist-ssr/
 frontend/*.local
 
-rasa-agent/models/
 rasa-agent/.rasa/
 rasa-agent/results/
 rasa-agent/__pycache__/
